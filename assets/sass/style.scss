@@ -364,10 +364,84 @@ body {
   }
   .chapter-7 {
     padding:5rem 0;
-    // background-image: url(../images/overlay-bg.jpg);
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
-    // background-size: cover;
-    // background-position: center center;
+    .head{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &::after{
+        content: "";
+        width: 3rem;
+        height: 1px;
+        border: 3px solid #d60505;
+        position: relative;
+        top: 2rem;
+        right: 4.7rem;
+
+      }
+    }
+    .card{
+      .text-image{
+    position: relative;
+    bottom: 1.2rem;
+    display: flex;
+    justify-content: center;
+    background-color: #d60505;
+    width: 100px;
+    left: 8rem;
+    color: #fff;
+    font-size: .7rem;
+      }
+      .current{
+        width: 150px;
+      }
+      .text-blog{
+        padding: 1.5rem 1rem;
+      }
+      .post{
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(0,0,0,.03);
+        padding: 1.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid rgba(0,0,0,.125);
+        img{
+          width: 3rem;
+          border-radius: 50%;
+        }
+        p{
+          margin: 0;
+        }
+        a{
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+  footer{
+    padding: 27rem 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-image: url(../images/overlay-bg.jpg);
+    position: relative;
+    .layer{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(253,0,0,0.4);
+    }
+    .container{
+      background-color: #fff;
+      border-radius: 1rem;
+      z-index: 999;
+    }
+    .col{
+      margin-top: 2rem;
+    }
   }
 }
