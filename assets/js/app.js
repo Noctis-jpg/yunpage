@@ -107,39 +107,82 @@ var options = {
 
 // contador JS codes begin >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-function countUp(val, limit, symbol, el) {
-  console.log('val: ' + val);
-  console.log('limit: ' + limit);
-  $(el).html(val + symbol);
-  val++;
-  setTimeout(function() {
-    if (val <= limit)
-      countUp(val, limit, symbol, el);
-  }, 100);
-};
 
-$(function() {
-  var _that = $('.contador'),
-    val = parseInt($(_that).data('value')),
-    symbol = $(_that).data('symbol');
-  countUp(0, val, symbol, _that);
-});
-$(function() {
-  var _that = $('.contador1'),
-    val = parseInt($(_that).data('value')),
-    symbol = $(_that).data('symbol');
-  countUp(0, val, symbol, _that);
-});
-$(function() {
-  var _that = $('.contador2'),
-    val = parseInt($(_that).data('value')),
-    symbol = $(_that).data('symbol');
-  countUp(0, val, symbol, _that);
-});
-$(function() {
-  var _that = $('.contador3'),
-    val = parseInt($(_that).data('value')),
-    symbol = $(_that).data('symbol');
-  countUp(0, val, symbol, _that);
-});
+
+var waypoint = new Waypoint({
+  element: document.getElementById('waypoints'),
+  handler: function(direction) {
+    function countUp(val, limit, symbol, el) {
+      // console.log('val: ' + val);
+      // console.log('limit: ' + limit);
+      $(el).html(val + symbol);
+      val++;
+      setTimeout(function() {
+        if (val <= limit)
+          countUp(val, limit, symbol, el);
+      }, 100);
+    };
+
+    $(function() {
+      var _that = $('.contador'),
+        val = parseInt($(_that).data('value')),
+        symbol = $(_that).data('symbol');
+      countUp(0, val, symbol, _that);
+    });
+    $(function() {
+      var _that = $('.contador1'),
+        val = parseInt($(_that).data('value')),
+        symbol = $(_that).data('symbol');
+      countUp(0, val, symbol, _that);
+    });
+    $(function() {
+      var _that = $('.contador2'),
+        val = parseInt($(_that).data('value')),
+        symbol = $(_that).data('symbol');
+      countUp(0, val, symbol, _that);
+    });
+    $(function() {
+      var _that = $('.contador3'),
+        val = parseInt($(_that).data('value')),
+        symbol = $(_that).data('symbol');
+      countUp(0, val, symbol, _that);
+    });
+  },
+  offset: '75%'
+})
 // contador JS codes end >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+//Slick slider begin >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+$( document ).ready(function() {
+
+  $(".myslider").slick({
+
+    // normal options...
+    infinite: false,
+
+    // the magic
+    responsive: [{
+
+        breakpoint: 300,
+        settings: {
+          slidesToShow: 3,
+          infinite: true
+        }
+
+      }, {
+
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          dots: true
+        }
+
+      }, {
+
+        breakpoint: 300,
+        settings: "unslick" // destroys slick
+
+      }]
+  });
+});
+//Slick slider end >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

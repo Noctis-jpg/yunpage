@@ -246,6 +246,7 @@ body {
       background-color: rgba(255,0,0,0.6);
       left: 0;
     }
+
     .text-wrap {
       text-align: center;
       position: absolute;
@@ -258,22 +259,115 @@ body {
         display: table-cell;
         vertical-align: middle;
       }
-    .one-icon{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      .material-icons{
-        font-size: 50px;
-        border-radius: 50%;
-        border: 7px solid #d60505;
-        width: 70px;
-        height: 70px;
+
+      .one-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .material-icons {
+          font-size: 50px;
+          border-radius: 50%;
+          border: 7px solid #d60505;
+          width: 70px;
+          height: 70px;
         }
       }
     }
   }
-.chapter-5{
-  padding: 20rem;
-}
+
+  .chapter-5 {
+    padding: 5rem;
+
+    .head {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      align-items: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 5.5rem;
+        left: 33rem;
+        border: 2px solid #d60505;
+        width: 35px;
+        height: 2px;
+      }
+    }
+
+    .card {
+      box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+      margin-top: 2.5rem;
+      transition: all 1s;
+
+      &:hover {
+        transform: scale(1.1);
+
+        .img {}
+      }
+
+      .text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0.7rem 0.5rem;
+
+        i {
+          font-size: 2rem;
+          margin-top: 0.5rem;
+        }
+      }
+
+      .date {
+        display: flex;
+        padding: 0.7rem 0.8rem;
+      }
+    }
+  }
+  .chapter-6{
+    padding: 10rem 0;
+    background-image: url(../images/overlay-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    .overlay{
+      position: absolute;
+      background-color: rgba(253,0,0,0.4);
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+    .myslider{
+      .face{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        img{
+          border-radius: 50%;
+        }
+        h1{
+          color: #fff;
+        }
+        p{
+          width: 50%;
+          color: #fff
+        }
+      }
+    }
+  }
+  .chapter-7 {
+    padding:5rem 0;
+    // background-image: url(../images/overlay-bg.jpg);
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover;
+    // background-position: center center;
+  }
 }
