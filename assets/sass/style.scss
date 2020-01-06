@@ -7,6 +7,34 @@ body {
     display: flex;
     transition: 0.5s ease-in;
     padding: 1rem;
+
+    li {
+      a {
+        color: black !important;
+
+        &:hover {
+          // color: #fff !important;
+
+          &::before {
+            content: "";
+            border: 1px solid #d60505;
+            position: absolute;
+            top: 2.8rem;
+            height: 1px;
+            width: 0;
+            // display: block;
+            animation-name: line;
+            animation-duration:2s;
+            animation-iteration-count: 1 ease;
+            animation-fill-mode: forwards;
+              @keyframes  line{
+              0%{width: 0;}
+              100%{width: 2.5%;}
+            }
+          }
+        }
+      }
+    }
   }
 
   .cent {
@@ -48,7 +76,16 @@ body {
                 position: absolute;
                 top: 2.5rem;
                 height: 1px;
-                width: 2.5rem;
+                width: 0;
+                // display: block;
+                animation-name: line;
+                animation-duration:2s;
+                animation-iteration-count: 1 ease;
+                animation-fill-mode: forwards;
+                  @keyframes  line{
+                  0%{width: 0;}
+                  100%{width: 2.5%;}
+                }
               }
             }
           }
@@ -107,7 +144,7 @@ body {
       box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
 
       .main-box {
-        padding: 3.2rem;
+    padding: 1rem 3.2rem;
         display: flex;
         flex-direction: row;
 
@@ -302,11 +339,14 @@ body {
       box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
       margin-top: 2.5rem;
       transition: all 1s;
+      overflow: hidden;
 
-      &:hover {
-        transform: scale(1.1);
+        .img {
+          transition: transform .5s ease;
+                &:hover {
+          transform: scale(1.1);
 
-        .img {}
+        }
       }
 
       .text {
@@ -421,7 +461,7 @@ body {
     }
   }
   footer{
-    padding: 27rem 0;
+    padding: 15rem 0;
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
@@ -435,13 +475,27 @@ body {
       height: 100%;
       background-color: rgba(253,0,0,0.4);
     }
-    .container{
-      background-color: #fff;
-      border-radius: 1rem;
-      z-index: 999;
-    }
     .col{
       margin-top: 2rem;
+    }
+    .head{
+      line-height: 2rem;
+      padding: 1rem;
+      p{
+        font-weight: 600;
+
+      }
+    }
+    .form-log{
+      .send-button{
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+
+        .btn{
+          width: 20%;
+        }
+      }
     }
   }
 }

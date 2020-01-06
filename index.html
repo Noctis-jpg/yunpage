@@ -13,7 +13,7 @@
 
 <body>
   <nav id="myNav" class="navbar navbar-expand-lg navbar-light fixed-top">
-    <a class="navbar-brand" href="#">YUNUS</a>
+    <a class="offset-3 navbar-brand" href="#">YUNUS</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,10 +23,10 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link about" id="about" href="#page1">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" id="services" href="#page2">Services</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Work</a>
@@ -40,7 +40,7 @@
       </ul>
     </div>
   </nav>
-  <section class="chapter-1">
+  <section id="about" class="chapter-1">
     <div class="main">
       <div class="layer"> </div>
       <div class="text-wrap">
@@ -57,7 +57,7 @@
     </div>
   </section>
 
-  <<section class="chapter-2">
+  <<section id="page1" class="chapter-2">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
@@ -116,7 +116,7 @@
     </div>
     </section>
 
-    <section class="chapter-3">
+    <section id="page2" class="chapter-3">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -375,7 +375,7 @@
 
     <section class="chapter-6">
       <div class="overlay"> </div>
-      <div class="container">
+      <div id="container" class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="myslider">
@@ -475,21 +475,26 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <form>
+            <form name="input" id="gonderilenform">
               <h1>Send Message</h1>
               <div class="form-log">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Ad">
+                  <input type="text" class="form-control" id="fname" placeholder="Ad">
                 </div>
                 <div class="col">
-                  <input type="email" class=" form-control" id="inputEmail4" placeholder="Email">
+                  <input type="email gidenveri1" class=" form-control" id="email inputEmail4" placeholder="Email">
                 </div>
                 <div class="col">
-                  <input type="text" class=" form-control" placeholder="Subject">
+                  <input type="text gidenveri2" class=" form-control" placeholder="Subject">
                 </div>
                 <div class="col">
                   <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
                 </div>
+                <div class="send-button">
+
+
+                <button type="submit button" id="#buton" class="btn btn-light">Send</button>
+        </div>
             </div>
 
             </form>
@@ -497,14 +502,16 @@
           <div class="col-lg-6">
             <div class="head">
               <h1>Get in Touch</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem expedita aperiam aliquid at. Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis mollitia inventore?</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem expedita aperiam aliquid at. Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis mollitia inventore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem expedita aperiam aliquid at. Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis mollitia inventore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem expedita aperiam aliquid at. Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis mollitia inventore? </p>
             </div>
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="assets/js/jquery-3.4.1.slim.js"></script>
+
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.js" charset="utf-8"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="assets/js/noframework.waypoints.min.js" charset="utf-8"></script>

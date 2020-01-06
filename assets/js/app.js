@@ -186,3 +186,12 @@ $( document ).ready(function() {
   });
 });
 //Slick slider end >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+// $(document).ready(function(){
+// $("nav").find("#about").click (e) ->
+//     e.preventDefault()
+//     section = $(this).attr "#about"
+//     $("html, body").animate
+//         scrollTop: $(section).offset().top
+// });
